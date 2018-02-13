@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*Barthelemy Peter
+  2-13-2018
+  Image Reader
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +22,7 @@ namespace AnimalIdentifier_Base
 
             ImageTagger animalImageTagger = new ImageTagger();
             List<Tag> tags = animalImageTagger.GetTagsForImage(imageFilePath);
-
+            
             foreach (Tag tag in tags)
             {
                 Console.WriteLine(tag.name);
