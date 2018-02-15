@@ -24,13 +24,17 @@ namespace AnimalIdentifier_Base
 
             ImageTagger animalImageTagger = new ImageTagger();
             List<Tag> tags = animalImageTagger.GetTagsForImage(imageFilePath);
-            Console.WriteLine("What is going on here");
+            
+            //Collects information on animal tags
             foreach (Tag tag in tags)
             {
                 find.animal_finder(tag);
                 Console.WriteLine(tag.name);
             }
 
+            Console.WriteLine("\n");
+
+            //Decides what to do once tag information is gathered
             find.animal_found();
 
 
