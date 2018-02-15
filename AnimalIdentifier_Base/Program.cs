@@ -15,6 +15,8 @@ namespace AnimalIdentifier_Base
 
         static void Main()
         {
+            TagReader find = new TagReader();
+
             // Get the path and filename to process from the user.
             Console.WriteLine("Analyze an image:");
             Console.Write("Enter the path to an image you wish to analzye: ");
@@ -22,11 +24,15 @@ namespace AnimalIdentifier_Base
 
             ImageTagger animalImageTagger = new ImageTagger();
             List<Tag> tags = animalImageTagger.GetTagsForImage(imageFilePath);
-            
+            Console.WriteLine("What is going on here");
             foreach (Tag tag in tags)
             {
+                find.animal_finder(tag);
                 Console.WriteLine(tag.name);
             }
+
+            find.animal_found();
+
 
             Console.WriteLine("Press Any Key to Continue.");
             Console.ReadLine();
