@@ -16,6 +16,8 @@ namespace AnimalIdentifier_Base
         static void Main()
         {
             TagReader find = new TagReader();
+            
+            
 
             // Get the path and filename to process from the user.
             Console.WriteLine("Analyze an image:");
@@ -28,18 +30,22 @@ namespace AnimalIdentifier_Base
             //Collects information on animal tags
             foreach (Tag tag in tags)
             {
-                find.animal_finder(tag);
+                find.Polymorphic(find.check_Dog, tag);
+                find.Polymorphic(find.check_Cat, tag);
+                find.Polymorphic(find.check_Bird, tag);
+
                 Console.WriteLine(tag.name);
             }
 
             Console.WriteLine("\n");
 
             //Decides what to do once tag information is gathered
-            find.animal_found();
+            find.animal_Found();
 
 
             Console.WriteLine("Press Any Key to Continue.");
             Console.ReadLine();
         }
+        
     }
 }

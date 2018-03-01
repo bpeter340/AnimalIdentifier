@@ -8,38 +8,42 @@ namespace AnimalIdentifier_Base
 {
     class TagReader
     {
-        bool found_dog = false;
-        bool found_cat = false;
-        string hold = " ";
-
-        public void animal_finder(Tag var) {
-            
-            //Figures if image tags return cats, dogs, or both  
-
-                if (var.name == "dog")
-                    found_dog = true;
-                else if (var.name == "dogs")
-                    found_dog = true;
-                else if (var.name == "cat")
-                    found_cat = true;
-                else if (var.name == "cats")
-                    found_cat = true;
-                else
-                    hold = "Prediction: You talked about neither a cat nor a dog.";
-           
-            }
-        public void animal_found()
+        //Variable Declarations had to be public to be used through the rest of the program
+        public Dogs check_Dog = new Dogs();
+        public Cats check_Cat = new Cats();
+        public Birds check_Bird = new Birds();
+        
+        
+        public void animal_Found()
         {
             //Decision making if-else statements
-            if (found_dog == found_cat && found_dog == true)
-                Console.WriteLine("This picture has both a cat and a dog!");
-            else if (found_dog)
-                Console.WriteLine("This picture has a dog.");
-            else if (found_cat)
-                Console.WriteLine("This picture has a cat.");
-            else
-                Console.WriteLine(hold);
-        }
+            //next few lines check for a combination of dogs, cats, and birds
+            if (check_Dog.Is_found == check_Cat.Is_found && check_Dog.Is_found == true)
+            {
+                if (check_Bird.Is_found == check_Dog.Is_found)
+                    Console.WriteLine("This picture has a dog, a cat, and a bird!");
+                else
+                    Console.WriteLine("This picture has both a cat and a dog!");
+            }
+            else if (check_Bird.Is_found == check_Cat.Is_found && check_Bird.Is_found == true)
+                Console.WriteLine("This picture has both a cat and a bird!");
+            else if (check_Bird.Is_found == check_Dog.Is_found && check_Bird.Is_found == true)
+                Console.WriteLine("This picture has both a dog and a bird!");
 
+            //Checks for singular uses of dogs, cats, and birds. Output handled by child classes of Animal
+            else if (check_Dog.Is_found)
+                check_Dog.Print();
+            else if (check_Cat.Is_found)
+                check_Cat.Print();
+            else if (check_Bird.Is_found)
+                check_Bird.Print();
+            else
+                Console.WriteLine("This picture does not contain a dog, cat, or bird.");
+        }
+        // Funtion set up for use of Polymorphic variable. Var is the polymorphic variable parameter
+         public void Polymorphic(Animals var, Tag place_holder)
+        {
+            var.Animal_finder(place_holder);
+        }
     }
 }
