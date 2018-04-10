@@ -12,7 +12,7 @@ namespace AnimalIdentifier_Base
 {
     public class ImageTagger
     {
-        const string subscriptionKey = "3a1afe82e29844138e8e8915e006581b";
+        const string subscriptionKey = "7248e8be1d0c428683d2f72a97cf4a16";
         const string uriBase = "https://southcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
 
         public List<Tag> GetTagsForImage(string imagePath)
