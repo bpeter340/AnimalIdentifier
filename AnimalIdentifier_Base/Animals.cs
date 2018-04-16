@@ -12,6 +12,7 @@ namespace AnimalIdentifier_Base
 
         public abstract void Print();
         public abstract void Animal_finder(Tag var);
+        public abstract double Certainty(Tag var);
         
     }
    

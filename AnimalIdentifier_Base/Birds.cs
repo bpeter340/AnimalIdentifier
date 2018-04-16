@@ -14,12 +14,16 @@ namespace AnimalIdentifier_Base
         }
         public override void Animal_finder(Tag var)
         {
-            Birds check_Bird = new Birds();
-
-            if (var.name == "bird")
+           
+            if (var.name == "bird" && Certainty(var) >= .8)
                 Is_found = true;
-            else if (var.name == "birds")
+            else if (var.name == "birds" && Certainty(var) >= .8)
                 Is_found = true;
         }
+        public override double Certainty(Tag var)
+        {
+            return var.confidence;
+        }
+
     }
 }
