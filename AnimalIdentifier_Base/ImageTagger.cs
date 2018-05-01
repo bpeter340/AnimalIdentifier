@@ -49,7 +49,8 @@ namespace AnimalIdentifier_Base
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
 
                 // Execute the REST API call.
-                response = await client.PostAsync(uri, content);
+                response = client.PostAsync(uri, content).GetAwaiter().GetResult();
+
 
                 // Get the JSON response.
                 string contentString = await response.Content.ReadAsStringAsync();
