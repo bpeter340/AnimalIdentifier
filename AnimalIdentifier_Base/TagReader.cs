@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    class TagReader
+    public class TagReader
     {
         //Variable Declarations had to be public to be used through the rest of the program
         public Dogs check_Dog = new Dogs();

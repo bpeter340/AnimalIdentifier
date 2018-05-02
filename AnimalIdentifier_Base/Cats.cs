@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    class Cats: Animals
+    public class Cats: Animals
     {
         public override void Print()
         {

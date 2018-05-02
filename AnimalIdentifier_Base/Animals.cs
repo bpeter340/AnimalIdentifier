@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    abstract class Animals
+    abstract public class Animals
     {
         public bool Is_found = false;
 
