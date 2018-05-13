@@ -49,6 +49,7 @@
     <Compile Include="Cats.cs" />
     <Compile Include="Dogs.cs" />
     <Compile Include="Animals.cs" />
+    <Compile Include="SearchResult.cs" />
     <Compile Include="TagReader.cs" />
     <Compile Include="ImageTagger.cs" />
     <Compile Include="Program.cs" />

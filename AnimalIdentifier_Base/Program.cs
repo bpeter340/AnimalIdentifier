@@ -38,8 +38,14 @@ namespace AnimalIdentifier_Base
 
             Console.WriteLine("\n");
             //Decides what to do once tag information is gathered
-            find.animal_Found();
+            SearchResult results = find.animal_Found();
 
+            // TODO: move all console display logic here
+
+            if(results.FoundDog)
+            {
+                Console.WriteLine("found dog");
+            }
 
             Console.WriteLine("Press Any Key to Continue.");
             Console.ReadLine();

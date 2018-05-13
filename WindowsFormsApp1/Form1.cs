@@ -71,33 +71,35 @@ namespace WindowsFormsApp1
                 find.Polymorphic(find.check_Cat, tag);
                 find.Polymorphic(find.check_Bird, tag);
             }
- 
-            if (find.check_Dog.Is_found == true)
-                Found_dog.Checked = true;
-            if (find.check_Cat.Is_found == true)
-                Found_cat.Checked = true;
-            if (find.check_Bird.Is_found == true)
-                Found_bird.Checked = true;
 
-            if (Found_dog.Checked == Found_cat.Checked && Found_dog.Checked == true)
-            {
-                if (Found_dog == Found_bird)
-                    View_output.Text = "A Bird, A cat and A dog are in this picture";
-                else
-                    View_output.Text = "A dog and a cat are in this picture";
-            }
-            else if (Found_bird.Checked == Found_cat.Checked && Found_cat.Checked == true)
-                View_output.Text = "A bird and a cat are in this picture";
-            else if (Found_dog.Checked == Found_bird.Checked && Found_bird.Checked == true)
-                View_output.Text = "A bird and a dog are in this picture";
-            else if (Found_dog.Checked)
-                View_output.Text = "A dog is in this picture";
-            else if (Found_cat.Checked)
-                View_output.Text = "A cat is in this picture";
-            else if (Found_bird.Checked)
-                View_output.Text = "A bird is in this picture";
-            else
-                View_output.Text = "This picture contains no animals";
+            Found_dog.Checked = find.check_Dog.Is_found;
+
+            //if (find.check_Dog.Is_found == true)
+            //    Found_dog.Checked = true;
+            //if (find.check_Cat.Is_found == true)
+            //    Found_cat.Checked = true;
+            //if (find.check_Bird.Is_found == true)
+            //    Found_bird.Checked = true;
+
+            //if (Found_dog.Checked == Found_cat.Checked && Found_dog.Checked == true)
+            //{
+            //    if (Found_dog == Found_bird)
+            //        View_output.Text = "A Bird, A cat and A dog are in this picture";
+            //    else
+            //        View_output.Text = "A dog and a cat are in this picture";
+            //}
+            //else if (Found_bird.Checked == Found_cat.Checked && Found_cat.Checked == true)
+            //    View_output.Text = "A bird and a cat are in this picture";
+            //else if (Found_dog.Checked == Found_bird.Checked && Found_bird.Checked == true)
+            //    View_output.Text = "A bird and a dog are in this picture";
+            //else if (Found_dog.Checked)
+            //    View_output.Text = "A dog is in this picture";
+            //else if (Found_cat.Checked)
+            //    View_output.Text = "A cat is in this picture";
+            //else if (Found_bird.Checked)
+            //    View_output.Text = "A bird is in this picture";
+            //else
+            //    View_output.Text = "This picture contains no animals";
                 
             
 
