@@ -18,7 +18,7 @@ This program uses the Microsoft Azure Computer Vision api to determine the conte
 ### AnimalIdentifier_Base
 This section contains code implementation of this program which includes inheritance, abstraction, polymorphism, and code development.
 
-### WindowsFormApp1
+### WindowsFormsApp1
 This section ties in the implementation from AnimalIdentifier_Base to create a windows form app using the .NET framework to demonstrate software reuse.
 
 
