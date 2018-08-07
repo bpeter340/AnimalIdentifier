@@ -10,7 +10,7 @@
 - Polymorphism
 - Software Reuse
 
-To test our implementation skills, all of our assignments built upon each other. Initially we were given a program that read an image file and decided what was in that image using a machine learning api. *Our objective, as students, was to add functionality to that program through object orientation.*
+To test our implementation skills, all of our assignments built upon each other. Initially we were given a program that read an image file and discovered the contents of the image using a machine learning api. *Our objective, as students, was to add functionality to that program using object orientation techniques.*
 
 ## How this works?
 This program uses the Microsoft Azure Computer Vision api to determine the content of image files. Data derived from the **Tag** and **Confidence** features were used in the implementation of this program.
